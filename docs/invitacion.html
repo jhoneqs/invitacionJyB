@@ -146,7 +146,7 @@
     .card {
       width: 100%;
       max-width: 430px;
-      min-height: 78vh;
+      min-height: auto;
       position: relative;
       z-index: 2;
       border-radius: 34px;
@@ -292,7 +292,7 @@
     .content {
       position: relative;
       z-index: 4;
-      min-height: 78vh;
+      min-height: auto;
       padding: 34px 24px;
       display: flex;
       flex-direction: column;
@@ -510,7 +510,7 @@
 
     @media (max-width: 390px) {
       .content {
-        min-height: 78vh;
+        min-height: auto;
         padding: 28px 18px;
       }
 
@@ -606,7 +606,53 @@ max-height:55px;
 
 }
 
+/* INVITADO */
+
+.guest-box{
+margin-top:22px;
+padding:18px;
+border-radius:22px;
+
+background:rgba(255,255,255,.16);
+border:1px solid rgba(255,255,255,.25);
+
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.12),
+inset 0 0 10px rgba(255,255,255,.1);
+
+max-width:320px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.guest-title{
+font-size:.95rem;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:10px;
+opacity:.9;
+}
+
+.guest-name{
+font-family:"Cormorant Garamond", serif;
+font-size:1.5rem;
+font-weight:600;
+line-height:1.2;
+margin-bottom:8px;
+}
+
+.guest-present{
+font-family:"Great Vibes", cursive;
+font-size:1.7rem;
+opacity:.95;
+}
+
   </style>
+
+  
 </head>
 <body>
 
@@ -653,6 +699,21 @@ max-height:55px;
         <p>y de nuestros padres,</p>
         <p>queremos compartir contigo este momento tan especial.</p>
         <div class="date-badge">27 de junio de 2026</div>
+        <div class="guest-box">
+
+    <div class="guest-title">
+        Con mucho cariño invitamos a:
+    </div>
+
+    <div class="guest-name">
+        Srta. Amparo Barbara Saavedra y Familia
+    </div>
+
+    <div class="guest-present">
+        Presente
+    </div>
+
+</div>
       </div>
     </div>
     <div class="arrow">↓</div>
@@ -715,45 +776,6 @@ max-height:55px;
     <div class="arrow arrow-dark">↓</div>
   </section>
 
-  <!-- CEREMONIA -->
-  <section class="section">
-    <div class="card">
-      <div class="card-bg" style="background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80');"></div>
-      <div class="card-overlay"></div>
-      <div class="border-flower"></div>
-      <div class="border-flower-2"></div>
-      <div class="border-flower-3"></div>
-      <div class="border-flower-4"></div>
-      <div class="corner-glow"></div>
-      <div class="frame"></div>
-      <div class="content">
-        <div class="location-icon">⛪</div>
-        <h2>Ceremonia</h2>
-        <div class="ornament-line">✦ ✦ ✦</div>
-
-        <p>Parroquia San Ambrocio Juliaca</p>
-        <p>Jirón San Martín 749</p>
-
-        <a
-          class="map-link"
-          href="https://www.google.com/maps/search/?api=1&query=Parroquia+San+Ambrocio+Jiron+San+Martin"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="icon">📍</span>
-          Ver ubicación de la iglesia
-        </a>
-
-        <div class="group-title">Fecha</div>
-        <p>27 de junio de 2026</p>
-
-        <div class="group-title">Hora</div>
-        <p>11:00 a.m.</p>
-      </div>
-    </div>
-    <div class="arrow arrow-dark">↓</div>
-  </section>
-
   <!-- RECEPCIÓN -->
   <section class="section">
     <div class="card">
@@ -765,23 +787,174 @@ max-height:55px;
       <div class="border-flower-4"></div>
       <div class="corner-glow"></div>
       <div class="frame"></div>
-      <div class="content">
-        <div class="location-icon">🎉</div>
-        <h2>Recepción</h2>
-        <div class="ornament-line">✦ ✦ ✦</div>
+<div class="content">
 
-        <p>Local de eventos "Imperial J&amp;E"</p>
-        <p>Jirón Antisuyo 241 - Juliaca</p>
+<div class="ornament">✦</div>
+<h2>Cronograma</h2>
+<div class="ornament-line">✦ ✦ ✦</div>
 
-        <a
-          class="map-link"
-          href="https://www.google.com/maps/search/?api=1&query=Local+de+eventos+Imperial+J%26E+Jiron+Antisuyo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="icon">📍</span>
-          Ver ubicación del local
-        </a>
+<div class="group-title"
+style="font-size:1.3rem;margin-top:10px;">
+Sábado 27 de Junio
+</div>
+
+<br>
+
+<div class="group-title"
+style="font-size:1.1rem;color:var(--night-blue);">
+⛪ Ceremonia Religiosa
+</div>
+
+<p>Iglesia Matriz de Santa Catalina</p>
+<p>Plaza de Armas - Juliaca</p>
+
+<p style="margin-top:8px;">
+🕐 11:00 a.m.
+</p>
+
+<a
+class="map-link"
+href="#"
+target="_blank">
+
+<span class="icon">📍</span>
+Ver ubicación
+</a>
+
+<br><br>
+
+
+<div class="group-title"
+style="font-size:1.1rem;color:var(--night-blue);">
+✍️ Ceremonia Civil
+</div>
+
+<p>Local de eventos "Imperial J&E"</p>
+
+<p>
+Jirón Antisuyo 241 - Juliaca
+</p>
+
+<p style="margin-top:8px;">
+🕐 12:30 p.m.
+</p>
+
+<a
+class="map-link"
+href="#"
+target="_blank">
+
+<span class="icon">📍</span>
+Ver ubicación
+</a>
+
+<br><br>
+
+
+<div class="group-title"
+style="font-size:1.1rem;color:var(--night-blue);">
+🎉 Recepción
+</div>
+
+<p>Local de eventos "Imperial J&E"</p>
+
+<p>
+Jirón Antisuyo 241 - Juliaca
+</p>
+
+<p style="margin-top:8px;">
+🕐 01:00 p.m.
+</p>
+
+<a
+class="map-link"
+href="#"
+target="_blank">
+
+<span class="icon">📍</span>
+Ver ubicación
+</a>
+
+<br><br>
+
+<div class="ornament-line">✦ ✦ ✦</div>
+
+
+<div class="group-title"
+style="font-size:1.3rem;">
+Domingo 28 de Junio
+</div>
+
+<br>
+
+<div class="group-title"
+style="font-size:1.1rem;color:var(--night-blue);">
+☕ Concentración y desayuno familiar
+</div>
+
+<p>
+Casa de los novios
+</p>
+
+<p>
+Psje. Zela A-11
+</p>
+
+<p style="font-size:1.15rem;">
+(A media cuadra del estadio Guillermo Briceño / Rosamedica)
+</p>
+
+<p style="margin-top:8px;">
+🕐 09:00 a.m.
+</p>
+
+<br><br>
+
+
+<div class="group-title"
+style="font-size:1.1rem;color:var(--night-blue);">
+🚗 Recojo de padrinos
+</div>
+
+<p>
+Inicio del recorrido
+</p>
+
+<p style="margin-top:8px;">
+🕐 10:00 a.m.
+</p>
+
+<br><br>
+
+
+<div class="group-title"
+style="font-size:1.1rem;color:var(--night-blue);">
+🎁 Challaqueo de regalos y Recepción
+</div>
+
+<p>
+Local de eventos "Imperial J&E"
+</p>
+
+<p>
+Jirón Antisuyo 241 - Juliaca
+</p>
+
+<p style="margin-top:8px;">
+🕐 12:30 p.m.
+</p>
+
+<a
+class="map-link"
+href="#"
+target="_blank">
+
+<span class="icon">📍</span>
+Ver ubicación
+</a>
+
+</div>
+
 
         <p class="quote">
           “Dos almas, un solo amor y una promesa para toda la vida”.
