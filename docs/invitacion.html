@@ -472,53 +472,77 @@ body{
 <button id="musicBtn" class="music-btn">
     🔇
 </button>
+
 <script>
 
 const audio = document.getElementById('musica');
 const btn = document.getElementById('musicBtn');
 
-let reproduciendo = true;
+let reproduciendo = false;
+
+/* =========================
+   AUTO PLAY MUSICA
+========================= */
 
 window.addEventListener('load', () => {
 
     audio.play()
         .then(() => {
-
             btn.innerHTML = "🎵";
             reproduciendo = true;
-
         })
         .catch(() => {
-
             btn.innerHTML = "🔇";
             reproduciendo = false;
-
         });
 
 });
 
+/* =========================
+   BOTON MUSICA
+========================= */
+
 btn.addEventListener('click', () => {
 
-    if(reproduciendo){
-
+    if (reproduciendo) {
         audio.pause();
-
         btn.innerHTML = "🔇";
-
         reproduciendo = false;
-
-    }else{
-
+    } else {
         audio.play();
-
         btn.innerHTML = "🎵";
-
         reproduciendo = true;
-
     }
 
 });
 
+/* =========================
+   PROTECCIÓN BÁSICA
+========================= */
+
+// clic derecho
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// selección de texto
+document.addEventListener('selectstart', e => e.preventDefault());
+
+// arrastrar imágenes
+document.addEventListener('dragstart', e => e.preventDefault());
+
+// teclas de inspección
+document.addEventListener('keydown', function(e) {
+
+    if (e.key === "F12") e.preventDefault();
+
+    if (e.ctrlKey && e.shiftKey && e.key === "I") e.preventDefault();
+
+    if (e.ctrlKey && e.key === "u") e.preventDefault();
+
+    if (e.ctrlKey && e.key === "s") e.preventDefault();
+
+});
+
 </script>
+
 </body>
 </html>
