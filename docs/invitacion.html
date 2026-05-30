@@ -330,11 +330,49 @@ body{
         0 0 8px rgba(0,0,0,.15);
 
     letter-spacing:.5px;
-
+}
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
+.music-btn{
 
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:60px;
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #AFC2D6,
+        #8FA8C2
+    );
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,.20);
+
+    transition:.3s;
+}
+
+.music-btn:hover{
+
+    transform:scale(1.08);
+}
 @media(max-width:768px){
 
     .borde-portada{
@@ -410,9 +448,11 @@ body{
             <span>Sr. Yesenia Quispe y Familia</span>
         </div>
 
-        <a href="#inicio" class="btn">
-            ✦ INGRESAR ✦
-        </a>
+        <a href="#inicio"
+        class="btn"
+        id="entrarBtn">
+        ✦ INGRESAR ✦
+</a>
 
         <div class="frase">
             El comienzo de nuestro para siempre
@@ -421,6 +461,64 @@ body{
     </div>
 
 </section>
+<!-- MUSICA -->
 
+<audio id="musica" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- BOTON MUSICA -->
+
+<button id="musicBtn" class="music-btn">
+    🔇
+</button>
+<script>
+
+const audio = document.getElementById('musica');
+const btn = document.getElementById('musicBtn');
+
+let reproduciendo = true;
+
+window.addEventListener('load', () => {
+
+    audio.play()
+        .then(() => {
+
+            btn.innerHTML = "🎵";
+            reproduciendo = true;
+
+        })
+        .catch(() => {
+
+            btn.innerHTML = "🔇";
+            reproduciendo = false;
+
+        });
+
+});
+
+btn.addEventListener('click', () => {
+
+    if(reproduciendo){
+
+        audio.pause();
+
+        btn.innerHTML = "🔇";
+
+        reproduciendo = false;
+
+    }else{
+
+        audio.play();
+
+        btn.innerHTML = "🎵";
+
+        reproduciendo = true;
+
+    }
+
+});
+
+</script>
 </body>
 </html>
