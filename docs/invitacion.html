@@ -4,543 +4,281 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jhon & Bárbara</title>
+<title>Invitación | Jhon & Bárbara</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<style>
+<link rel="stylesheet" href="style.css">
 
-:root{
-    --azul:#8FA8C2;
-    --azul-claro:#AFC2D6;
-    --azul-fondo:#EDF4F9;
-    --dorado:#C9B27A;
-    --texto:#6D7882;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-
-    min-height:100vh;
-
-    font-family:'Cormorant Garamond',serif;
-
-    background:
-    linear-gradient(
-        180deg,
-        #FAFBFC 0%,
-        #F4F8FB 50%,
-        #EEF4F8 100%
-    );
-
-    overflow-x:hidden;
-}
-
-/* ========================= */
-/* PORTADA */
-/* ========================= */
-
-.hero{
-
-    min-height:85vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    padding:30px 20px;
-
-    position:relative;
-
-    overflow:hidden;
-}
-
-/* ========================= */
-/* BORDE FLORAL */
-/* ========================= */
-
-.borde-portada{
-
-    position:absolute;
-
-    top:0;
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:100%;
-    max-width:900px;
-
-    height:100%;
-
-    object-fit:fill;
-
-    z-index:1;
-
-    pointer-events:none;
-
-    opacity:.95;
-}
-
-/* ========================= */
-/* CONTENIDO */
-/* ========================= */
-
-.card{
-
-    width:100%;
-    max-width:500px;
-
-    text-align:center;
-
-    position:relative;
-
-    z-index:10;
-
-    padding:0px 20px;
-}
-
-/* ========================= */
-/* FOTO */
-/* ========================= */
-
-.photo-frame{
-
-    width:300px;
-    height:300px;
-
-    margin:auto;
-
-    position:relative;
-}
-
-.marco{
-
-    position:absolute;
-
-    width:100%;
-    height:100%;
-
-    object-fit:contain;
-
-    top:0;
-    left:0;
-
-    z-index:1;
-}
-
-.foto{
-
-    position:absolute;
-
-    width:250px;
-    height:250px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    top:50%;
-    left:50%;
-
-    transform:translate(-50%,-50%);
-
-    z-index:2;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.12);
-}
-
-/* ========================= */
-/* TITULOS */
-/* ========================= */
-
-.subtitle{
-
-    margin-top:5px;
-
-    letter-spacing:6px;
-
-    font-size:.85rem;
-
-    color:var(--dorado);
-}
-
-.names{
-
-    margin-top:5px;
-
-    font-family:'Parisienne',cursive;
-
-    font-size:4.8rem;
-
-    line-height:1;
-
-    color:var(--azul);
-
-    text-shadow:
-    0 5px 15px rgba(143,168,194,.15);
-}
-
-.date{
-
-    margin-top:8px;
-
-    letter-spacing:4px;
-
-    font-size:1.15rem;
-
-    color:var(--texto);
-}
-
-/* ========================= */
-/* SEPARADOR */
-/* ========================= */
-
-.separator{
-
-    width:180px;
-    height:1px;
-
-    margin:20px auto;
-
-    background:var(--dorado);
-
-    position:relative;
-}
-
-.separator::after{
-
-    content:"✦";
-
-    position:absolute;
-
-    left:50%;
-    top:-13px;
-
-    transform:translateX(-50%);
-
-    background:white;
-
-    color:var(--dorado);
-
-    padding:0 10px;
-}
-
-/* ========================= */
-/* INVITADO */
-/* ========================= */
-
-.guest{
-
-    color:#666;
-
-    font-size:1rem;
-}
-
-.guest span{
-
-    display:block;
-
-    margin-top:5px;
-
-    font-size:1.5rem;
-
-    color:#497baa;
-
-    font-weight:600;
-
-    text-shadow:
-        2px 2px 4px rgb(255, 255, 255),
-        0 0 8px rgb(253, 249, 249);
-}
-
-/* ========================= */
-/* BOTON */
-/* ========================= */
-
-.btn{
-
-    display:inline-flex;
-
-    justify-content:center;
-    align-items:center;
-
-    width:180px;
-    height:50px;
-
-    margin-top:25px;
-
-    text-decoration:none;
-
-    color:white;
-
-    font-size:1.2rem;
-
-    background:
-    linear-gradient(
-        135deg,
-        #AFC2D6,
-        #8FA8C2
-    );
-
-    border-radius:
-    120px 120px 28px 28px /
-    150px 150px 28px 28px;
-
-    border:2px solid rgba(255,255,255,.8);
-
-    box-shadow:
-    0 15px 35px rgba(143,168,194,.25);
-
-    transition:.3s;
-}
-
-.btn:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:
-    0 20px 40px rgba(143,168,194,.35);
-}
-
-/* ========================= */
-/* FRASE */
-/* ========================= */
-
-.frase{
-
-    margin-top:35px;
-
-    font-size:1.8rem;
-
-    font-style:italic;
-
-    font-weight:600;
-
-    color:#ffffff;
-
-    text-shadow:
-        2px 2px 4px rgba(0,0,0,.45),
-        0 0 8px rgba(0,0,0,.15);
-
-    letter-spacing:.5px;
-}
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
-.music-btn{
-
-    position:fixed;
-
-    bottom:25px;
-    right:25px;
-
-    width:60px;
-    height:60px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:
-    linear-gradient(
-        135deg,
-        #AFC2D6,
-        #8FA8C2
-    );
-
-    color:white;
-
-    font-size:24px;
-
-    cursor:pointer;
-
-    z-index:9999;
-
-    box-shadow:
-    0 10px 20px rgba(0,0,0,.20);
-
-    transition:.3s;
-}
-
-.music-btn:hover{
-
-    transform:scale(1.08);
-}
-@media(max-width:768px){
-
-    .borde-portada{
-
-        width:100%;
-        max-width:100%;
-    }
-
-    .photo-frame{
-
-        width:260px;
-        height:260px;
-    }
-
-    .foto{
-
-        width:215px;
-        height:215px;
-    }
-
-    .names{
-
-        font-size:3.2rem;
-    }
-
-    .btn{
-
-        width:210px;
-    }
-}
-
-</style>
 </head>
-
 <body>
 
-<section class="hero">
+<div class="inv-page">
 
-    <img src="borde2.png"
-         class="borde-portada"
-         alt="">
+    <!-- CUADRO 1 -->
 
-    <div class="card">
+<section class="inv-box inv-hero">
 
-        <div class="photo-frame">
+    <div class="hero-overlay"></div>
 
-            <img src="marco-floral.png"
-                 class="marco"
-                 alt="">
+    <div class="hero-content">
 
-            <img src="imagenfoto2.png"
-                 class="foto"
-                 alt="Jhon y Bárbara">
-
-        </div>
-
-        <div class="subtitle">
+        <div class="inv-subtitle">
             NUESTRA BODA
         </div>
 
-        <h1 class="names">
-            Jhon & Bárbara
-        </h1>
+       <h1 class="inv-names">
+    Jhon &<br>
+    Bárbara
+</h1>
 
-        <div class="date">
+        <div class="inv-date">
             27 · JUNIO · 2026
         </div>
 
-        <div class="separator"></div>
+        <div class="inv-separator"></div>
 
-        <div class="guest">
-            Tenemos el honor de invitar a
-            <span>Sr. Yesenia Quispe y Familia</span>
+        
+
+        <div class="frase-portada">
+            "Hoy comenzamos a escribir la historia más hermosa de nuestras vidas. Gracias por acompañarnos en este momento tan especial."
         </div>
 
-        <a href="#inicio"
-        class="btn"
-        id="entrarBtn">
-        ✦ INGRESAR ✦
-</a>
+        <h2 class="inv-title">
+            Cuenta Regresiva
+        </h2>
 
-        <div class="frase">
-            El comienzo de nuestro para siempre
+        <div class="inv-countdown">
+
+            <div class="inv-time">
+                <span id="dias">0</span>
+                <small>Días</small>
+            </div>
+
+            <div class="inv-time">
+                <span id="horas">0</span>
+                <small>Horas</small>
+            </div>
+
+            <div class="inv-time">
+                <span id="minutos">0</span>
+                <small>Min</small>
+            </div>
+
+            <div class="inv-time">
+                <span id="segundos">0</span>
+                <small>Seg</small>
+            </div>
+
         </div>
 
     </div>
 
 </section>
-<!-- MUSICA -->
+
+    <!-- CUADRO 2 -->
+
+    <section class="inv-box">
+
+
+<div class="info-block">
+
+    <h3>🤍 Acompañados por el cariño de nuestros padres</h3>
+
+    <p>
+        Justo Quispe Mamani<br>
+        Evelina V. Sarmiento Ancalla
+    </p>
+
+    <br>
+
+    <p>
+        Efraín Saavedra Alanoca<br>
+        Lucía Lipe Ticona
+    </p>
+
+</div>
+
+<div class="info-block">
+
+    <h3>💐 Y en compañía de nuestros padrinos</h3>
+
+    <p>
+        <strong>Padrinos Mayores</strong><br>
+        Blady Rivera Chalco<br>
+        Ross Mary Huanca Romero
+    </p>
+
+    <br>
+
+    <p>
+        <strong>Padrinos de Aros</strong><br>
+        Antonio Machaca Mamani<br>
+        Ayde Condori Condori
+    </p>
+
+    <br>
+
+    <p>
+        <strong>Padrinos de Torta</strong><br>
+        Ronald W. Machaca Vilca<br>
+        Vianny Flores Mamani
+    </p>
+
+</div>
+
+    <!-- CRONOGRAMA -->
+
+ <h2 class="inv-title">
+    Cronograma
+</h2>
+
+<div class="cronograma-simple">
+
+    <!-- SABADO -->
+
+    <div class="dia-box">
+        <h3>Sábado</h3>
+        <span>27 de Junio</span>
+
+        <div class="evento-line">
+            <div class="hora">10:30</div>
+            <div class="detalle">⛪ Ceremonia Religiosa</div>
+        </div>
+
+        <div class="evento-line">
+            <div class="hora">12:30</div>
+            <div class="detalle">✍️ Matrimonio Civil</div>
+        </div>
+
+        <div class="evento-line">
+            <div class="hora">13:00</div>
+            <div class="detalle">🎉 Ceremonia General</div>
+        </div>
+
+        <div class="evento-line">
+            <div class="hora">16:00</div>
+            <div class="detalle">🥂 Recepción</div>
+        </div>
+    </div>
+
+    <!-- DOMINGO -->
+
+    <div class="dia-box">
+        <h3>Domingo</h3>
+        <span>28 de Junio</span>
+
+        <div class="evento-line">
+            <div class="hora">09:00</div>
+            <div class="detalle">☕ Desayuno Familiar</div>
+        </div>
+
+        <div class="evento-line">
+            <div class="hora">10:00</div>
+            <div class="detalle">🚐 Recojo de Padrinos</div>
+        </div>
+
+        <div class="evento-line">
+            <div class="hora">12:30</div>
+            <div class="detalle">🎁 Challa de Regalos</div>
+        </div>
+    </div>
+
+</div>
+</section>
+
+    <!-- CUADRO 3 -->
+
+    <section class="inv-box">
+
+        <h2 class="inv-title">
+            Amenizan
+        </h2>
+
+        <div class="grupos-grid">
+
+            <div class="grupo"><img src="grupo1.png"></div>
+            <div class="grupo"><img src="grupo2.png"></div>
+
+            <div class="grupo"><img src="grupo3.png"></div>
+            <div class="grupo"><img src="grupo4.png"></div>
+
+            <div class="grupo"><img src="grupo5.png"></div>
+            <div class="grupo"><img src="grupo6.png"></div>
+
+            <div class="grupo"><img src="grupo7.png"></div>
+            <div class="grupo"><img src="grupo8.png"></div>
+
+            <div class="grupo"><img src="grupo9.png"></div>
+            <div class="grupo"><img src="grupo10.png"></div>
+
+        </div>
+
+    </section>
+
+</div>
 
 <audio id="musica" autoplay loop>
-    <source src="music.mp3" type="audio/mpeg">
+    <source src="music.mp3">
 </audio>
 
-<!-- BOTON MUSICA -->
-
 <button id="musicBtn" class="music-btn">
-    🔇
+🔇
 </button>
+
+<script src="script.js"></script>
 
 <script>
 
-const audio = document.getElementById('musica');
-const btn = document.getElementById('musicBtn');
+function actualizarCuenta() {
 
-let reproduciendo = false;
+    const fechaBoda =
+    new Date("2026-06-27T12:30:00").getTime();
 
-/* =========================
-   AUTO PLAY MUSICA
-========================= */
+    const ahora = new Date().getTime();
 
-window.addEventListener('load', () => {
+    const diferencia = fechaBoda - ahora;
 
-    audio.play()
-        .then(() => {
-            btn.innerHTML = "🎵";
-            reproduciendo = true;
-        })
-        .catch(() => {
-            btn.innerHTML = "🔇";
-            reproduciendo = false;
-        });
+    if (diferencia <= 0) {
 
-});
+        document.getElementById("dias").textContent = "0";
+        document.getElementById("horas").textContent = "0";
+        document.getElementById("minutos").textContent = "0";
+        document.getElementById("segundos").textContent = "0";
 
-/* =========================
-   BOTON MUSICA
-========================= */
-
-btn.addEventListener('click', () => {
-
-    if (reproduciendo) {
-        audio.pause();
-        btn.innerHTML = "🔇";
-        reproduciendo = false;
-    } else {
-        audio.play();
-        btn.innerHTML = "🎵";
-        reproduciendo = true;
+        return;
     }
 
-});
+    const dias =
+    Math.floor(diferencia / (1000 * 60 * 60 * 24));
 
-/* =========================
-   PROTECCIÓN BÁSICA
-========================= */
+    const horas =
+    Math.floor(
+        (diferencia % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
 
-// clic derecho
-document.addEventListener('contextmenu', e => e.preventDefault());
+    const minutos =
+    Math.floor(
+        (diferencia % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
 
-// selección de texto
-document.addEventListener('selectstart', e => e.preventDefault());
+    const segundos =
+    Math.floor(
+        (diferencia % (1000 * 60))
+        / 1000
+    );
 
-// arrastrar imágenes
-document.addEventListener('dragstart', e => e.preventDefault());
+    document.getElementById("dias").textContent = dias;
+    document.getElementById("horas").textContent = horas;
+    document.getElementById("minutos").textContent = minutos;
+    document.getElementById("segundos").textContent = segundos;
+}
 
-// teclas de inspección
-document.addEventListener('keydown', function(e) {
+actualizarCuenta();
 
-    if (e.key === "F12") e.preventDefault();
-
-    if (e.ctrlKey && e.shiftKey && e.key === "I") e.preventDefault();
-
-    if (e.ctrlKey && e.key === "u") e.preventDefault();
-
-    if (e.ctrlKey && e.key === "s") e.preventDefault();
-
-});
+setInterval(actualizarCuenta, 1000);
 
 </script>
 
