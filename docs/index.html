@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jhon & Bárbara</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<section class="hero">
+
+    <img src="borde2.png" class="borde-portada">
+
+    <div class="card">
+
+        <div class="photo-frame">
+
+            <img src="imagenfoto2.png" class="foto">
+
+        </div>
+
+        <div class="subtitle">NUESTRA BODA</div>
+
+        <h1 class="names">Jhon & Bárbara</h1>
+
+        <div class="date">27 · JUNIO · 2026</div>
+
+        <div class="separator"></div>
+
+        <div class="guest">
+            Tenemos el honor de invitar a
+            <<span id="guestName"></span>
+        </div>
+
+        <a href="#" class="btn">✦ INGRESAR ✦</a>
+
+        <div class="frase">El comienzo de nuestro para siempre</div>
+
+    </div>
+
+</section>
+
+<audio id="musica" autoplay loop>
+    <source src="music.mp3">
+</audio>
+
+<button id="musicBtn" class="music-btn">🔇</button>
+
+<script src="script.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const guest = params.get("guest");
+
+document.getElementById("guestName").textContent =
+  guest ? guest : "Estimado invitado";
+</script>
+</body>
+</html>

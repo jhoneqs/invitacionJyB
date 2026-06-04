@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Generador de Invitaciones</title>
+<style>
+body {
+  font-family: Arial;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  display: block;
+  margin-top: 15px;
+  word-break: break-all;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h3>Generar invitación</h3>
+
+  <input id="nombre" placeholder="Nombre del invitado">
+
+  <button onclick="generar()">Crear link</button>
+
+  <a id="link"></a>
+</div>
+
+<script>
+function generar() {
+  const nombre = document.getElementById("nombre").value;
+  const url = window.location.origin + "invitacionJyB/invitacion.html?guest=" + encodeURIComponent(nombre);
+
+  const link = document.getElementById("link");
+  link.href = url;
+  link.innerText = url;
+}
+</script>
+
+</body>
+</html>
