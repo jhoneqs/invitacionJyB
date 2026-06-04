@@ -1833,3 +1833,581 @@ background-image:url("imagenfoto3.png");
 
     margin-bottom:10px;
 }
+/* =========================
+   SECCIÓN 2 ELEGANTE
+========================= */
+
+.inv-seccion2 {
+    background: linear-gradient(180deg, #ffffff, #f7fafc);
+}
+
+/* bloques */
+.bloque {
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,.06);
+    transition: .4s ease;
+}
+
+/* hover elegante */
+.bloque:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.10);
+}
+
+/* fondos diferenciados */
+.fondo-dorado {
+    background: linear-gradient(135deg, #fffaf0, #fff);
+    border-left: 5px solid var(--dorado);
+}
+
+.fondo-azul {
+    background: linear-gradient(135deg, #f3f8fc, #ffffff);
+    border-left: 5px solid var(--azul);
+}
+
+/* títulos */
+.titulo-bloque {
+    text-align: center;
+    color: var(--azul);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.titulo-grande {
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--azul);
+    margin-bottom: 20px;
+}
+
+/* listas */
+.lista-nombres p {
+    text-align: center;
+    margin: 3px 0;
+    color: #555;
+}
+
+/* cronograma */
+.cronograma .dia {
+    margin-bottom: 20px;
+}
+
+.cronograma h3 {
+    text-align: center;
+    color: var(--dorado);
+    margin-bottom: 10px;
+}
+
+.evento {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: #fafcff;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(0,0,0,.05);
+}
+
+.evento p {
+    margin: 0;
+    color: #555;
+}
+
+/* hora estilo badge */
+.evento .hora {
+    background: linear-gradient(135deg, var(--azul-claro), var(--azul));
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: .8rem;
+    min-width: 65px;
+    text-align: center;
+}
+
+/* animación suave */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aparecer .8s ease forwards;
+}
+
+.fade-in:nth-child(1){ animation-delay: .1s; }
+.fade-in:nth-child(2){ animation-delay: .3s; }
+.fade-in:nth-child(3){ animation-delay: .5s; }
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(4px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+/* =========================
+   LLUVIA DE PÉTALOS
+========================= */
+
+.petalos-container {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.petalo {
+    position: absolute;
+    top: -10px;
+    width: 12px;
+    height: 12px;
+    opacity: 0.8;
+    border-radius: 50% 0 50% 0;
+    animation: caer linear forwards;
+}
+
+/* colores: celeste y rosado */
+.petalo.celeste {
+    background: #AFC2D6;
+}
+
+.petalo.rosado {
+    background: #F7B6C8;
+}
+
+@keyframes caer {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* =========================
+   SECCIÓN 2 PREMIUM
+========================= */
+
+.inv-seccion2 {
+    background: linear-gradient(180deg, #f8fbff, #ffffff);
+}
+
+/* bloques centrados */
+.centro {
+    text-align: center;
+}
+
+/* bloques base */
+.bloque {
+    padding: 28px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(143,168,194,.12);
+    transition: .4s ease;
+}
+
+/* hover suave */
+.bloque:hover {
+    transform: translateY(-5px);
+}
+
+/* azul paleta */
+.azul {
+    background: linear-gradient(135deg, #f3f8fc, #ffffff);
+    border: 1px solid rgba(143,168,194,.2);
+}
+
+/* dorado suave */
+.dorado {
+    background: linear-gradient(135deg, #fffaf2, #ffffff);
+    border: 1px solid rgba(201,178,122,.25);
+}
+
+/* títulos */
+.titulo-bloque {
+    font-size: 1.4rem;
+    color: var(--azul);
+    margin-bottom: 15px;
+}
+
+.titulo-grande {
+    font-size: 1.8rem;
+    color: var(--azul);
+    margin-bottom: 20px;
+}
+
+/* textos */
+.subtexto {
+    color: #5f6d7a;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+/* cronograma */
+.cronograma .dia {
+    margin-bottom: 20px;
+}
+
+.cronograma h3 {
+    color: var(--dorado);
+    margin-bottom: 10px;
+}
+
+/* eventos */
+.evento {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: #fafcff;
+    border-radius: 14px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(143,168,194,.15);
+}
+
+.evento p {
+    margin: 0;
+    color: #555;
+}
+
+/* hora */
+.hora {
+    min-width: 65px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: .8rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, var(--azul-claro), var(--azul));
+}
+
+/* botón google maps */
+.btn-mapa {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+    box-shadow: 0 8px 20px rgba(143,168,194,.25);
+    transition: .3s;
+}
+
+.btn-mapa:hover {
+    transform: scale(1.05);
+}
+.btn-mapa {
+    display: block;
+    width: fit-content;
+    margin: 8px auto 15px auto;
+    padding: 10px 16px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .95rem;
+    color: white;
+
+    background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+
+    box-shadow: 0 10px 25px rgba(143,168,194,.25);
+    transition: .3s ease;
+}
+
+.btn-mapa:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(143,168,194,.35);
+}
+.evento {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: #fafcff;
+    border-radius: 14px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(143,168,194,.15);
+}
+
+/* texto del evento */
+.evento p {
+    flex: 1;
+    margin: 0;
+    color: #555;
+}
+
+/* hora (izquierda) */
+.hora {
+    min-width: 65px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: .8rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, var(--azul-claro), var(--azul));
+}
+
+/* ubicación (derecha) */
+.ubicacion {
+    font-size: .85rem;
+    font-weight: 600;
+    color: var(--dorado);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+.ubicacion:hover {
+    color: var(--azul);
+    transform: scale(1.05);
+}
+/* =========================
+   CRONOGRAMA ELEGANTE
+========================= */
+
+.cronograma {
+    margin-top: 15px;
+}
+
+.dia h3 {
+    text-align: center;
+    color: var(--azul);
+    font-size: 1.6rem;
+    margin: 20px 0 15px;
+}
+
+/* tarjeta evento */
+.evento-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 18px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 25px rgba(143,168,194,.12);
+    border: 1px solid rgba(143,168,194,.15);
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 12px;
+    align-items: center;
+}
+
+/* hora */
+.hora-badge {
+    background: linear-gradient(135deg, var(--azul-claro), var(--azul));
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: .85rem;
+    font-weight: 600;
+    min-width: 65px;
+    text-align: center;
+}
+
+/* texto */
+.evento-info h4 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #3f5f7a;
+}
+
+.evento-info p {
+    margin: 2px 0;
+    font-size: .9rem;
+    color: #666;
+}
+
+.lugar {
+    font-size: .85rem;
+    color: #8a8a8a;
+}
+
+/* botón ubicación */
+.ubicacion-btn {
+    font-size: .85rem;
+    font-weight: 600;
+    color: var(--dorado);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+.ubicacion-btn:hover {
+    color: var(--azul);
+    transform: scale(1.05);
+}
+/* =========================
+   EVENTO STYLE PREMIUM
+========================= */
+
+.evento-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border-radius: 18px;
+
+    padding: 14px 16px;
+    margin-bottom: 12px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+
+    border: 1px solid rgba(143,168,194,.15);
+}
+
+/* HORA (izquierda tipo cápsula) */
+.hora-pill {
+    background: #8FA8C2;
+    color: white;
+
+    padding: 10px 14px;
+    border-radius: 30px;
+
+    font-weight: 600;
+    font-size: .9rem;
+
+    min-width: 65px;
+    text-align: center;
+
+    box-shadow: 0 6px 15px rgba(143,168,194,.25);
+}
+
+/* TEXTO CENTRAL */
+.evento-info {
+    flex: 1;
+    padding: 0 12px;
+}
+
+.evento-titulo {
+    font-weight: 700;
+    font-size: .95rem;
+    text-transform: uppercase;
+    color: #3f5f7a;
+    margin-bottom: 3px;
+}
+
+.evento-lugar {
+    font-size: .85rem;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.evento-direccion {
+    font-size: .8rem;
+    color: #9aa3ad;
+}
+
+/* LINK MAPA (derecha) */
+.map-link {
+    font-size: .85rem;
+    font-weight: 600;
+    color: #C9B27A;
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: .3s;
+}
+
+.map-link:hover {
+    color: #8FA8C2;
+    transform: scale(1.05);
+}
+.evento-card {
+    display: flex;
+    align-items: center;
+
+    background: #fff;
+    border-radius: 18px;
+
+    padding: 14px 16px;
+    margin-bottom: 12px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    border: 1px solid rgba(143,168,194,.15);
+}
+
+/* hora izquierda */
+.hora-pill {
+    background: #8FA8C2;
+    color: white;
+
+    padding: 10px 14px;
+    border-radius: 30px;
+
+    font-weight: 600;
+    font-size: .9rem;
+
+    min-width: 65px;
+    text-align: center;
+
+    margin-right: 12px;
+}
+
+/* contenido */
+.evento-info {
+    flex: 1;
+}
+
+/* textos */
+.evento-titulo {
+    font-weight: 700;
+    font-size: .95rem;
+    text-transform: uppercase;
+    color: #3f5f7a;
+    margin-bottom: 3px;
+}
+
+.evento-lugar {
+    font-size: .85rem;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.evento-direccion {
+    font-size: .8rem;
+    color: #9aa3ad;
+}
+
+/* 👇 link ABAJO */
+.map-link {
+    display: block;
+    margin-top: 8px;
+
+    font-size: .85rem;
+    font-weight: 600;
+    color: #C9B27A;
+    text-decoration: none;
+
+    width: fit-content;
+
+    transition: .3s;
+}
+
+.map-link:hover {
+    color: #8FA8C2;
+}
