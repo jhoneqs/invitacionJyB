@@ -2411,3 +2411,22 @@ background-image:url("imagenfoto3.png");
 .map-link:hover {
     color: #8FA8C2;
 }
+.inv-cuenta {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.inv-cuenta .bloque {
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 25px;
+    backdrop-filter: blur(6px);
+}
+
+.inv-cuenta .subtexto {
+    line-height: 1.8;
+    font-size: 16px;
+}
